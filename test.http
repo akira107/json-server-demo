@@ -1,0 +1,34 @@
+
+@baseUrl = http://localhost:3000/api
+
+#product
+
+#@name getAllProduct
+
+GET {{baseUrl}}/products
+
+###
+
+
+#@name addNewProduct
+POST {{baseUrl}}/products
+Content-Type: application/json
+{
+    "id" :"Laptop"
+    
+}
+
+###  
+###@name updateProduct /id
+PATCH  {{baseUrl}}/products/2  
+Content-Type: application/json
+{
+    "name" :"New Laptop"
+}
+
+
+###  
+###@name removeProduct /id
+DELETE   {{baseUrl}}/products/2  
+
+
